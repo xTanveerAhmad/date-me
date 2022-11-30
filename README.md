@@ -1,16 +1,9 @@
 # date_me
 
-A new Flutter project.
+Dating App witgh Flutter.
 
-## Getting Started
+## Screen Shots
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![d1](https://user-images.githubusercontent.com/115605746/204701677-1be629d5-086f-42a1-a178-41905f8df165.jpg)
+![2](https://user-images.githubusercontent.com/115605746/204701701-cb4308d2-3073-448f-acc9-1be3430d985b.jpg)
+![d3](https://user-images.githubusercontent.com/115605746/204701726-5d04a053-0a5c-4d23-9cbd-e86bb8c7ea25.jpg)
