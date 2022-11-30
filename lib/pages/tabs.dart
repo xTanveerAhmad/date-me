@@ -1,11 +1,4 @@
-/*
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Flutter UI Kit
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
-*/
+
 import 'package:date_me/pages/inbox.dart';
 import 'package:date_me/pages/likes.dart';
 import 'package:date_me/pages/myprofile.dart';
@@ -33,7 +26,7 @@ class _TabsExampleState extends State<TabsExample> {
       child: Scaffold(
         backgroundColor: Colors.white,
         bottomNavigationBar: (TabBar(
-          padding: EdgeInsets.only(bottom: 20),
+          padding: const EdgeInsets.only(bottom: 20),
           labelColor: style.appColor,
           unselectedLabelColor: const Color.fromARGB(255, 185, 196, 207),
           indicatorColor: Colors.transparent,

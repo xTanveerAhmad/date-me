@@ -1,11 +1,4 @@
-/*
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Flutter UI Kit
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
-*/
+
 import 'package:flutter/material.dart';
 import '../components/styles.dart' as style;
 
@@ -56,7 +49,7 @@ class _SettingState extends State<Setting> {
   Widget _buildBody() {
     return SingleChildScrollView(
       child: Container(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -163,7 +156,7 @@ class _SettingState extends State<Setting> {
               color: Colors.white,
               child: Row(
                 children: <Widget>[
-                  Icon(
+                  const Icon(
                     Icons.facebook,
                     color: style.appColor,
                   ),
@@ -194,7 +187,7 @@ class _SettingState extends State<Setting> {
               color: Colors.white,
               child: Row(
                 children: <Widget>[
-                  Icon(
+                  const Icon(
                     Icons.facebook,
                     color: style.appColor,
                   ),
@@ -227,17 +220,17 @@ class _SettingState extends State<Setting> {
   }
 
   myBoxDecoration() {
-    return BoxDecoration(
+    return const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(5)));
   }
 
   Widget _buildGreyLabel(text) {
     return Padding(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       child: Text(
         '$text',
-        style: TextStyle(color: Colors.grey, fontSize: 16),
+        style: const TextStyle(color: Colors.grey, fontSize: 16),
       ),
     );
   }

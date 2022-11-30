@@ -1,11 +1,4 @@
-/*
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Flutter UI Kit
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
-*/
+
 import 'package:date_me/pages/profile.dart';
 import 'package:flutter/material.dart';
 import '../components/styles.dart' as style;
@@ -98,7 +91,6 @@ class _VerificationState extends State<Verification> {
                 width: double.infinity,
                 margin: const EdgeInsets.symmetric(horizontal: 30),
                 child: ElevatedButton(
-                  child: const Text("Continue"),
                   onPressed: () {
                     Navigator.push(
                         context,
@@ -113,6 +105,7 @@ class _VerificationState extends State<Verification> {
                       borderRadius: BorderRadius.circular(50),
                     ),
                   ),
+                  child: const Text("Continue"),
                 ),
               ),
               TextButton(
@@ -127,7 +120,7 @@ class _VerificationState extends State<Verification> {
   }
 
   Widget _textFieldOTP({required bool first, last}) {
-    return Container(
+    return SizedBox(
       height: 70,
       width: 60,
       child: AspectRatio(

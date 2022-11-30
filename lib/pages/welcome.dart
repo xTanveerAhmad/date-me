@@ -1,11 +1,4 @@
-/*
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Flutter UI Kit
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
-*/
+
 import 'package:flutter/material.dart';
 import 'package:date_me/pages/login.dart';
 import '../components/styles.dart' as style;
@@ -57,15 +50,15 @@ class _WelcomeState extends State<Welcome> {
             ],
           ),
           Column(
-            children: [
-              const Padding(
+            children: const [
+              Padding(
                 padding: EdgeInsets.only(),
-                child: const Text(
+                child: Text(
                   'Welcome to',
                   style: TextStyle(fontFamily: "bold", fontSize: 26),
                 ),
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(),
                 child: Text(
                   'Logo',

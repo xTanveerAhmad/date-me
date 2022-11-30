@@ -1,11 +1,4 @@
-/*
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Flutter UI Kit
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
-*/
+
 import 'package:date_me/pages/tabs.dart';
 import 'package:flutter/material.dart';
 import '../components/styles.dart' as style;
@@ -66,7 +59,7 @@ class _ProfileState extends State<Profile> {
               Stack(
                 children: [
                   Container(
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       backgroundImage: AssetImage('assets/images/2.jpg'),
                       radius: 70,
                     ),
@@ -75,14 +68,14 @@ class _ProfileState extends State<Profile> {
                       bottom: 5,
                       right: 0,
                       child: Container(
-                        padding: EdgeInsets.all(6),
+                        padding: const EdgeInsets.all(6),
                         decoration: BoxDecoration(
                             color: Colors.grey[300],
-                            borderRadius: BorderRadius.all(
+                            borderRadius: const BorderRadius.all(
                               Radius.circular(100),
                             ),
                             border: Border.all(width: 3, color: Colors.white)),
-                        child: Icon(Icons.camera_alt, size: 16),
+                        child: const Icon(Icons.camera_alt, size: 16),
                       )),
                 ],
               ),
@@ -96,104 +89,99 @@ class _ProfileState extends State<Profile> {
           ),
         ),
         Container(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Name',
+              const Text('Name',
                   style: TextStyle(fontFamily: "semi-bold", fontSize: 15)),
               TextField(
                 decoration: style.simpleInput('Enter Name'),
               ),
-              SizedBox(height: 25),
-              Text('Date of Birth',
+              const SizedBox(height: 25),
+              const Text('Date of Birth',
                   style: TextStyle(fontFamily: "semi-bold", fontSize: 15)),
               TextField(
                 decoration: style.simpleInput('dd/mm/yyyy'),
               ),
-              SizedBox(height: 25),
-              Text('Gender',
+              const SizedBox(height: 25),
+              const Text('Gender',
                   style: TextStyle(fontFamily: "semi-bold", fontSize: 15)),
-              SizedBox(height: 25),
+              const SizedBox(height: 25),
               Row(
                 children: <Widget>[
                   Expanded(
                     child: ElevatedButton(
-                      child: Text("Male"),
                       onPressed: status ? null : disableButton,
                       style: ElevatedButton.styleFrom(
-                        primary: style.appColor,
-                        onPrimary: Colors.white,
-                        padding: EdgeInsets.symmetric(vertical: 15),
+                        foregroundColor: Colors.white, backgroundColor: style.appColor,
+                        padding: const EdgeInsets.symmetric(vertical: 15),
                         shape: RoundedRectangleBorder(
                           // side: BorderSide(color: style.appColor, width: 1),
                           borderRadius: BorderRadius.circular(50),
                         ),
                       ),
+                      child: const Text("Male"),
                     ),
                   ),
-                  SizedBox(width: 16),
+                  const SizedBox(width: 16),
                   Expanded(
                     child: ElevatedButton(
-                      child: Text("female"),
                       onPressed: status == false ? null : enableButton,
                       style: ElevatedButton.styleFrom(
-                        primary: style.appColor,
-                        onPrimary: Colors.white,
-                        padding: EdgeInsets.symmetric(vertical: 15),
+                        foregroundColor: Colors.white, backgroundColor: style.appColor,
+                        padding: const EdgeInsets.symmetric(vertical: 15),
                         shape: RoundedRectangleBorder(
                           // side: BorderSide(color: style.appColor, width: 1),
                           borderRadius: BorderRadius.circular(50),
                         ),
                       ),
+                      child: const Text("female"),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 40),
-              Text('Preference of Interest',
+              const SizedBox(height: 40),
+              const Text('Preference of Interest',
                   style: TextStyle(fontFamily: "semi-bold", fontSize: 15)),
-              SizedBox(height: 25),
+              const SizedBox(height: 25),
               Row(
                 children: <Widget>[
                   Expanded(
                     child: ElevatedButton(
-                      child: Text("Male"),
                       onPressed: status ? null : disableButton,
                       style: ElevatedButton.styleFrom(
-                        primary: style.appColor,
-                        onPrimary: Colors.white,
-                        padding: EdgeInsets.symmetric(vertical: 15),
+                        foregroundColor: Colors.white, backgroundColor: style.appColor,
+                        padding: const EdgeInsets.symmetric(vertical: 15),
                         shape: RoundedRectangleBorder(
                           // side: BorderSide(color: style.appColor, width: 1),
                           borderRadius: BorderRadius.circular(50),
                         ),
                       ),
+                      child: const Text("Male"),
                     ),
                   ),
-                  SizedBox(width: 16),
+                  const SizedBox(width: 16),
                   Expanded(
                     child: ElevatedButton(
-                      child: Text("female"),
                       onPressed: status == false ? null : enableButton,
                       style: ElevatedButton.styleFrom(
-                        primary: style.appColor,
-                        onPrimary: Colors.white,
-                        padding: EdgeInsets.symmetric(vertical: 15),
+                        foregroundColor: Colors.white, backgroundColor: style.appColor,
+                        padding: const EdgeInsets.symmetric(vertical: 15),
                         shape: RoundedRectangleBorder(
                           // side: BorderSide(color: style.appColor, width: 1),
                           borderRadius: BorderRadius.circular(50),
                         ),
                       ),
+                      child: const Text("female"),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 25),
+              const SizedBox(height: 25),
               Container(
                 width: double.infinity,
                 child: ElevatedButton(
-                  child: Text("Continue"),
                   onPressed: () {
                     Navigator.of(context).pushNamedAndRemoveUntil(
                         TabsExample.id, (route) => false);
@@ -203,13 +191,13 @@ class _ProfileState extends State<Profile> {
                     //         builder: (context) => const TabsExample()));
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: style.appColor,
-                    onPrimary: Colors.white,
-                    padding: EdgeInsets.symmetric(vertical: 15),
+                    foregroundColor: Colors.white, backgroundColor: style.appColor,
+                    padding: const EdgeInsets.symmetric(vertical: 15),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50),
                     ),
                   ),
+                  child: const Text("Continue"),
                 ),
               ),
             ],
