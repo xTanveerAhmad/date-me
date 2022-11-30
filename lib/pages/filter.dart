@@ -1,11 +1,4 @@
-/*
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Flutter UI Kit
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
-*/
+
 import 'package:flutter/material.dart';
 import '../components/styles.dart' as style;
 
@@ -32,7 +25,7 @@ class _FilterState extends State<Filter> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 243, 243, 243),
+      backgroundColor: const Color.fromARGB(255, 243, 243, 243),
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -59,16 +52,16 @@ class _FilterState extends State<Filter> {
   Widget _buildBody() {
     return SingleChildScrollView(
       child: Container(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Container(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               color: Colors.white,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
+                children: const <Widget>[
                   Text('Location'),
                   Icon(
                     Icons.location_on,
@@ -80,13 +73,13 @@ class _FilterState extends State<Filter> {
             _buildGreyLabel(
                 'Change your location to see dating members in other cities'),
             Container(
-              padding: EdgeInsets.all(16),
-              margin: EdgeInsets.only(bottom: 16),
+              padding: const EdgeInsets.all(16),
+              margin: const EdgeInsets.only(bottom: 16),
               color: Colors.white,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Text('Intrested In', style: TextStyle(color: style.appColor)),
+                  const Text('Intrested In', style: TextStyle(color: style.appColor)),
                   Center(
                     child: _buildSelect(),
                   ),
@@ -95,13 +88,13 @@ class _FilterState extends State<Filter> {
             ),
             Container(
               width: double.infinity,
-              margin: EdgeInsets.only(bottom: 16),
-              padding: EdgeInsets.symmetric(vertical: 16),
+              margin: const EdgeInsets.only(bottom: 16),
+              padding: const EdgeInsets.symmetric(vertical: 16),
               decoration: myBoxDecoration(),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(left: 16),
                     child: Text('Maximum Distance',
                         style: TextStyle(color: style.appColor)),
@@ -128,13 +121,13 @@ class _FilterState extends State<Filter> {
             ),
             Container(
               width: double.infinity,
-              margin: EdgeInsets.only(bottom: 16),
-              padding: EdgeInsets.symmetric(vertical: 16),
+              margin: const EdgeInsets.only(bottom: 16),
+              padding: const EdgeInsets.symmetric(vertical: 16),
               decoration: myBoxDecoration(),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(left: 16),
                     child: Text('Age Range',
                         style: TextStyle(color: style.appColor)),
@@ -162,19 +155,18 @@ class _FilterState extends State<Filter> {
             _buildGreyLabel(
                 'Sharing your social content will greatly increase your chances of receiving messages!'),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               color: Colors.white,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Text('Match Sound'),
+                  const Text('Match Sound'),
                   Switch(
                     activeColor: style.appColor,
                     value: isShare,
                     onChanged: (value) {
                       setState(() {
                         isShare = value;
-                        print(isShare);
                       });
                     },
                   )
@@ -188,7 +180,7 @@ class _FilterState extends State<Filter> {
   }
 
   myBoxDecoration() {
-    return BoxDecoration(
+    return const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(5)));
   }
@@ -216,10 +208,10 @@ class _FilterState extends State<Filter> {
 
   Widget _buildGreyLabel(text) {
     return Padding(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       child: Text(
         '$text',
-        style: TextStyle(color: Colors.grey, fontSize: 16),
+        style: const TextStyle(color: Colors.grey, fontSize: 16),
       ),
     );
   }

@@ -1,11 +1,4 @@
-/*
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Flutter UI Kit
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
-*/
+
 import 'package:date_me/pages/friend_profile.dart';
 import 'package:flutter/material.dart';
 import '../components/styles.dart' as style;
@@ -81,8 +74,8 @@ class _LikesState extends State<Likes> {
                       onTap: () {
                         Navigator.push(
                             context,
-                            new MaterialPageRoute(
-                                builder: (context) => new FriendProfile()));
+                            MaterialPageRoute(
+                                builder: (context) => const FriendProfile()));
                       },
                       child: Row(
                         children: <Widget>[
@@ -113,8 +106,8 @@ class _LikesState extends State<Likes> {
                           )),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.end,
-                            children: <Widget>[
-                              const Padding(
+                            children: const <Widget>[
+                              Padding(
                                 padding: EdgeInsets.only(top: 5),
                                 child: Text('1d',
                                     style: TextStyle(

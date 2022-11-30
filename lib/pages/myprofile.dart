@@ -1,11 +1,4 @@
-/*
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Flutter UI Kit
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
-*/
+
 import 'package:date_me/pages/EditProfile.dart';
 import 'package:date_me/pages/setting.dart';
 import 'package:flutter/material.dart';
@@ -43,13 +36,11 @@ class _MyProfileState extends State<MyProfile> {
 
   Widget _buildBody() {
     return SingleChildScrollView(
-      child: Container(
-        child: Column(
-          children: [
-            _buildCarousel(),
-            _ProfileDesc(),
-          ],
-        ),
+      child: Column(
+        children: [
+          _buildCarousel(),
+          _ProfileDesc(),
+        ],
       ),
     );
   }
@@ -89,16 +80,16 @@ class _MyProfileState extends State<MyProfile> {
             bottom: 10,
             left: 16,
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
-                borderRadius: const BorderRadius.all(Radius.circular(30)),
+                borderRadius: BorderRadius.all(Radius.circular(30)),
               ),
               child: InkWell(
                 onTap: () {
                   Navigator.push(
                       context,
-                      new MaterialPageRoute(
-                          builder: (context) => new Setting()));
+                      MaterialPageRoute(
+                          builder: (context) => const Setting()));
                 },
                 child: Container(
                   padding:
@@ -114,21 +105,21 @@ class _MyProfileState extends State<MyProfile> {
             bottom: 10,
             right: 16,
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
-                borderRadius: const BorderRadius.all(Radius.circular(30)),
+                borderRadius: BorderRadius.all(Radius.circular(30)),
               ),
               child: InkWell(
                 onTap: () {
                   Navigator.push(
                       context,
-                      new MaterialPageRoute(
-                          builder: (context) => new EditProfile()));
+                      MaterialPageRoute(
+                          builder: (context) => const EditProfile()));
                 },
                 child: Container(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-                  child: Text(
+                  child: const Text(
                     "Edit info",
                     style: TextStyle(
                         fontSize: 16,
@@ -153,25 +144,23 @@ class _MyProfileState extends State<MyProfile> {
           Row(
             children: <Widget>[
               Expanded(
-                  child: Container(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const <Widget>[
-                    Text(
-                      'John Doe ',
-                      style: TextStyle(fontSize: 22, fontFamily: "bold"),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 5),
-                      child: Text('Florida, USA',
-                          style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.grey,
-                              fontFamily: "medium")),
-                    ),
-                  ],
-                ),
-              )),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const <Widget>[
+                      Text(
+                        'John Doe ',
+                        style: TextStyle(fontSize: 22, fontFamily: "bold"),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 5),
+                        child: Text('Florida, USA',
+                            style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.grey,
+                                fontFamily: "medium")),
+                      ),
+                    ],
+                  )),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
                 decoration: buildIconButton(),
@@ -186,34 +175,32 @@ class _MyProfileState extends State<MyProfile> {
             ],
           ),
           const SizedBox(height: 16),
-          Container(
-              child: Row(
-            children: [
-              const Icon(Icons.school, color: Colors.grey),
-              const Padding(
-                padding: EdgeInsets.only(left: 10),
-                child: Text(
-                  "Flutter Developer",
-                  style: TextStyle(
-                      fontSize: 16, color: Colors.grey, fontFamily: "medium"),
-                ),
-              )
+          Row(
+            children: const [
+          Icon(Icons.school, color: Colors.grey),
+          Padding(
+            padding: EdgeInsets.only(left: 10),
+            child: Text(
+              "Flutter Developer",
+              style: TextStyle(
+                  fontSize: 16, color: Colors.grey, fontFamily: "medium"),
+            ),
+          )
             ],
-          )),
-          Container(
-              child: Row(
-            children: [
-              const Icon(Icons.category_outlined, color: Colors.grey),
-              const Padding(
-                padding: EdgeInsets.only(left: 10),
-                child: Text(
-                  "Music, Traveling, Netflix",
-                  style: TextStyle(
-                      fontSize: 16, color: Colors.grey, fontFamily: "medium"),
-                ),
-              )
+          ),
+          Row(
+            children: const [
+          Icon(Icons.category_outlined, color: Colors.grey),
+          Padding(
+            padding: EdgeInsets.only(left: 10),
+            child: Text(
+              "Music, Traveling, Netflix",
+              style: TextStyle(
+                  fontSize: 16, color: Colors.grey, fontFamily: "medium"),
+            ),
+          )
             ],
-          )),
+          ),
           const SizedBox(height: 16),
           const InkWell(
             child: Text(
@@ -238,7 +225,7 @@ class _MyProfileState extends State<MyProfile> {
                 ),
                 InkWell(
                   child: Row(
-                    children: [
+                    children: const [
                       Text(
                         'Female',
                         style: TextStyle(
@@ -256,14 +243,12 @@ class _MyProfileState extends State<MyProfile> {
             color: Colors.white,
             child: Row(
               children: <Widget>[
-                Expanded(
-                    child: Container(
-                  child: const Text("Show my age",
-                      style: TextStyle(
-                          fontFamily: "semi-bold",
-                          fontSize: 16,
-                          color: Colors.black87)),
-                )),
+                const Expanded(
+                    child: Text("Show my age",
+                        style: TextStyle(
+                            fontFamily: "semi-bold",
+                            fontSize: 16,
+                            color: Colors.black87))),
                 Switch(
                   activeColor: style.appColor,
                   value: isShare,

@@ -1,11 +1,4 @@
-/*
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Flutter UI Kit
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
-*/
+
 import 'package:flutter/material.dart';
 import '../components/styles.dart' as style;
 
@@ -41,13 +34,11 @@ class _FriendProfileState extends State<FriendProfile> {
 
   Widget _buildBody() {
     return SingleChildScrollView(
-      child: Container(
-        child: Column(
-          children: [
-            _buildCarousel(),
-            _hotelDesc(),
-          ],
-        ),
+      child: Column(
+        children: [
+          _buildCarousel(),
+          _hotelDesc(),
+        ],
       ),
     );
   }
@@ -105,25 +96,23 @@ class _FriendProfileState extends State<FriendProfile> {
           Row(
             children: <Widget>[
               Expanded(
-                  child: Container(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const <Widget>[
-                    Text(
-                      'John Doe ',
-                      style: TextStyle(fontSize: 22, fontFamily: "bold"),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 5),
-                      child: Text('Florida, USA',
-                          style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.grey,
-                              fontFamily: "medium")),
-                    ),
-                  ],
-                ),
-              )),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const <Widget>[
+                      Text(
+                        'John Doe ',
+                        style: TextStyle(fontSize: 22, fontFamily: "bold"),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 5),
+                        child: Text('Florida, USA',
+                            style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.grey,
+                                fontFamily: "medium")),
+                      ),
+                    ],
+                  )),
               Column(
                 children: <Widget>[
                   Container(
@@ -148,34 +137,32 @@ class _FriendProfileState extends State<FriendProfile> {
             ],
           ),
           const SizedBox(height: 16),
-          Container(
-              child: Row(
-            children: [
-              const Icon(Icons.school, color: Colors.grey),
-              const Padding(
-                padding: EdgeInsets.only(left: 10),
-                child: Text(
-                  "Flutter Developer",
-                  style: TextStyle(
-                      fontSize: 16, color: Colors.grey, fontFamily: "medium"),
-                ),
-              )
+          Row(
+            children: const [
+          Icon(Icons.school, color: Colors.grey),
+          Padding(
+            padding: EdgeInsets.only(left: 10),
+            child: Text(
+              "Flutter Developer",
+              style: TextStyle(
+                  fontSize: 16, color: Colors.grey, fontFamily: "medium"),
+            ),
+          )
             ],
-          )),
-          Container(
-              child: Row(
-            children: [
-              const Icon(Icons.category_outlined, color: Colors.grey),
-              const Padding(
-                padding: EdgeInsets.only(left: 10),
-                child: Text(
-                  "Music, Traveling, Netflix",
-                  style: TextStyle(
-                      fontSize: 16, color: Colors.grey, fontFamily: "medium"),
-                ),
-              )
+          ),
+          Row(
+            children: const [
+          Icon(Icons.category_outlined, color: Colors.grey),
+          Padding(
+            padding: EdgeInsets.only(left: 10),
+            child: Text(
+              "Music, Traveling, Netflix",
+              style: TextStyle(
+                  fontSize: 16, color: Colors.grey, fontFamily: "medium"),
+            ),
+          )
             ],
-          )),
+          ),
           const SizedBox(height: 16),
           const InkWell(
             child: Text(
@@ -200,7 +187,7 @@ class _FriendProfileState extends State<FriendProfile> {
                 ),
                 InkWell(
                   child: Row(
-                    children: [
+                    children: const [
                       Text(
                         'Female',
                         style: TextStyle(

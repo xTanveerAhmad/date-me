@@ -1,11 +1,4 @@
-/*
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Flutter UI Kit
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
-*/
+
 import 'package:flutter/material.dart';
 import '../components/styles.dart' as style;
 
@@ -14,8 +7,8 @@ const appColor = Color(0xFFf62354);
 simpleInput(val) {
   return InputDecoration(
     hintText: '$val',
-    contentPadding: EdgeInsets.all(0),
-    hintStyle: TextStyle(color: Colors.grey),
+    contentPadding: const EdgeInsets.all(0),
+    hintStyle: const TextStyle(color: Colors.grey),
     border: underlineInputBorder(),
     focusedBorder: underlineInputBorder(),
     enabledBorder: underlineInputBorder(),
@@ -23,14 +16,13 @@ simpleInput(val) {
 }
 
 underlineInputBorder() {
-  return UnderlineInputBorder(
+  return const UnderlineInputBorder(
       borderSide: BorderSide(width: 1, color: Colors.black12));
 }
 
 BorderedButton() {
   return ElevatedButton.styleFrom(
-      primary: Colors.transparent,
-      onPrimary: style.appColor,
+      foregroundColor: style.appColor, backgroundColor: Colors.transparent,
       padding: const EdgeInsets.symmetric(vertical: 15),
       shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(50)),
@@ -40,8 +32,7 @@ BorderedButton() {
 
 FillButton() {
   return ElevatedButton.styleFrom(
-      primary: style.appColor,
-      onPrimary: Colors.white,
+      foregroundColor: Colors.white, backgroundColor: style.appColor,
       padding: const EdgeInsets.symmetric(vertical: 15),
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(50)),
@@ -51,10 +42,9 @@ FillButton() {
 
 FacebookButton() {
   return ElevatedButton.styleFrom(
-      primary: (const Color(0xFF395697)),
-      onPrimary: Colors.white,
-      padding: EdgeInsets.symmetric(vertical: 15),
-      shape: RoundedRectangleBorder(
+      foregroundColor: Colors.white, backgroundColor: (const Color(0xFF395697)),
+      padding: const EdgeInsets.symmetric(vertical: 15),
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(50)),
       ),
       elevation: 0);

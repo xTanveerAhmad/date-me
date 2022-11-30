@@ -1,11 +1,4 @@
-/*
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Flutter UI Kit
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
-*/
+
 import 'package:date_me/pages/chat.dart';
 import 'package:date_me/pages/filter.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +26,7 @@ List<Widget> cards = List.generate(
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16.0),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             offset: Offset(0, 17),
             blurRadius: 23.0,
@@ -128,10 +121,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 print('end');
               },
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             _index != cards.length
                 ? Container(
-                    margin: EdgeInsets.symmetric(vertical: 48.0),
+                    margin: const EdgeInsets.symmetric(vertical: 48.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -142,10 +135,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           },
                           heroTag: 'cancel',
                           backgroundColor: Colors.white,
-                          child: Icon(Icons.close,
+                          child: const Icon(Icons.close,
                               color: style.appColor, size: 30),
                         ),
-                        Padding(padding: EdgeInsets.only(right: 40.0)),
+                        const Padding(padding: EdgeInsets.only(right: 40.0)),
                         FloatingActionButton(
                           onPressed: () {
                             Navigator.push(
@@ -155,24 +148,24 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           },
                           heroTag: 'message',
                           backgroundColor: Colors.white,
-                          child: Icon(Icons.message_outlined,
+                          child: const Icon(Icons.message_outlined,
                               color: style.appColor, size: 30),
                         ),
-                        Padding(padding: EdgeInsets.only(right: 40.0)),
+                        const Padding(padding: EdgeInsets.only(right: 40.0)),
                         FloatingActionButton(
                           onPressed: () {
                             _controller.forward();
                           },
                           backgroundColor: Colors.white,
                           heroTag: 'like',
-                          child: Icon(Icons.favorite,
+                          child: const Icon(Icons.favorite,
                               color: style.appColor, size: 30),
                         ),
                       ],
                     ),
                   )
                 : Container(
-                    child: (Text('Swiped')),
+                    child: (const Text('Swiped')),
                   )
           ],
         ),
@@ -185,7 +178,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       child: Container(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [],
+          children: const [],
         ),
       ),
     );

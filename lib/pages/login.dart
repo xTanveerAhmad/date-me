@@ -1,11 +1,4 @@
-/*
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Flutter UI Kit
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
-*/
+
 import 'package:date_me/pages/verification.dart';
 import 'package:flutter/material.dart';
 import '../components/styles.dart' as style;
@@ -34,13 +27,13 @@ class _LoginState extends State<Login> {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.chevron_left,
               size: 30,
             ),
           ),
           backgroundColor: Colors.transparent,
-          iconTheme: IconThemeData(color: Colors.black87),
+          iconTheme: const IconThemeData(color: Colors.black87),
           elevation: 0,
         ),
         body: Padding(
@@ -72,15 +65,15 @@ class _LoginState extends State<Login> {
                 padding: const EdgeInsets.all(30.0),
                 child: TextFormField(
                   keyboardType: TextInputType.number,
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Colors.black),
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.black12),
+                        borderSide: const BorderSide(color: Colors.black12),
                         borderRadius: BorderRadius.circular(50)),
-                    prefix: Padding(
+                    prefix: const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 15),
                       child: CircleAvatar(
                         backgroundImage: AssetImage('assets/images/india.png'),
@@ -88,7 +81,7 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: style.appColor),
+                        borderSide: const BorderSide(color: style.appColor),
                         borderRadius: BorderRadius.circular(50)),
                   ),
                 ),
@@ -101,7 +94,7 @@ class _LoginState extends State<Login> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => Verification()));
+                              builder: (context) => const Verification()));
                     },
                     style: style.FillButton(),
                     icon: const Icon(Icons.phone),

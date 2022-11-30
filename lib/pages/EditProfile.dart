@@ -1,11 +1,4 @@
-/*
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Flutter UI Kit
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
-*/
+
 import 'package:flutter/material.dart';
 import '../components/styles.dart' as style;
 
@@ -33,7 +26,7 @@ class _EditProfileState extends State<EditProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 243, 243, 243),
+      backgroundColor: const Color.fromARGB(255, 243, 243, 243),
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -59,130 +52,124 @@ class _EditProfileState extends State<EditProfile> {
 
   Widget _buildBody() {
     return SingleChildScrollView(
-      child: Container(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Container(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Container(
-                    padding: const EdgeInsets.all(16),
-                    width: double.infinity,
-                    child: Column(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                padding: const EdgeInsets.all(16),
+                width: double.infinity,
+                child: Column(
+                  children: [
+                    Stack(
                       children: [
-                        Stack(
-                          children: [
-                            Container(
-                              child: CircleAvatar(
-                                backgroundImage:
-                                    AssetImage('assets/images/2.jpg'),
-                                radius: 70,
-                              ),
-                            ),
-                            Positioned(
-                                bottom: 5,
-                                right: 0,
-                                child: Container(
-                                  padding: EdgeInsets.all(6),
-                                  decoration: BoxDecoration(
-                                      color: Colors.grey[300],
-                                      borderRadius: BorderRadius.all(
-                                        Radius.circular(100),
-                                      ),
-                                      border: Border.all(
-                                          width: 3, color: Colors.white)),
-                                  child: Icon(Icons.camera_alt, size: 16),
-                                )),
-                          ],
+                        const CircleAvatar(
+                          backgroundImage:
+                              AssetImage('assets/images/2.jpg'),
+                          radius: 70,
                         ),
-                        const Padding(
-                          padding: EdgeInsets.only(top: 10),
-                          child: Text('John Doe',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w600, fontSize: 20)),
-                        ),
+                        Positioned(
+                            bottom: 5,
+                            right: 0,
+                            child: Container(
+                              padding: const EdgeInsets.all(6),
+                              decoration: BoxDecoration(
+                                  color: Colors.grey[300],
+                                  borderRadius: const BorderRadius.all(
+                                    Radius.circular(100),
+                                  ),
+                                  border: Border.all(
+                                      width: 3, color: Colors.white)),
+                              child: const Icon(Icons.camera_alt, size: 16),
+                            )),
                       ],
                     ),
-                  ),
-                  _buildBoldFont('About You'),
-                  TextField(
-                    maxLines: 4,
-                    decoration: inputFieldDecoration('Bio'),
-                  ),
-                  _buildBoldFont('Name'),
-                  TextField(
-                    decoration: inputFieldDecoration('Enter Name'),
-                  ),
-                  _buildBoldFont('Date of birth'),
-                  TextField(
-                    decoration: inputFieldDecoration('Enter Date of birth'),
-                  ),
-                  _buildBoldFont('Location'),
-                  TextField(
-                    decoration: inputFieldDecoration('Enter CIty'),
-                  ),
-                  _buildBoldFont('Gender'),
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16),
-                    color: Colors.white,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Text('I Am'),
-                        Center(
-                          child: _buildSelect(),
-                        ),
-                      ],
+                    const Padding(
+                      padding: EdgeInsets.only(top: 10),
+                      child: Text('John Doe',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600, fontSize: 20)),
                     ),
-                  ),
-                  _buildBoldFont('Other'),
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16),
-                    color: Colors.white,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Text('Don \'t Show My Age',
-                            style: TextStyle(fontSize: 16)),
-                        Switch(
-                          value: isSmartPhotos,
-                          activeColor: style.appColor,
-                          onChanged: (value) {
-                            setState(() {
-                              isSmartPhotos = value;
-                            });
-                          },
-                        )
-                      ],
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16),
-                    color: Colors.white,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Text('Make My Distance Invisible',
-                            style: TextStyle(fontSize: 16)),
-                        Switch(
-                          value: isSmartPhotos,
-                          activeColor: style.appColor,
-                          onChanged: (value) {
-                            setState(() {
-                              isSmartPhotos = value;
-                            });
-                          },
-                        )
-                      ],
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-          ],
-        ),
+              _buildBoldFont('About You'),
+              TextField(
+                maxLines: 4,
+                decoration: inputFieldDecoration('Bio'),
+              ),
+              _buildBoldFont('Name'),
+              TextField(
+                decoration: inputFieldDecoration('Enter Name'),
+              ),
+              _buildBoldFont('Date of birth'),
+              TextField(
+                decoration: inputFieldDecoration('Enter Date of birth'),
+              ),
+              _buildBoldFont('Location'),
+              TextField(
+                decoration: inputFieldDecoration('Enter CIty'),
+              ),
+              _buildBoldFont('Gender'),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                color: Colors.white,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    const Text('I Am'),
+                    Center(
+                      child: _buildSelect(),
+                    ),
+                  ],
+                ),
+              ),
+              _buildBoldFont('Other'),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                color: Colors.white,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    const Text('Don \'t Show My Age',
+                        style: TextStyle(fontSize: 16)),
+                    Switch(
+                      value: isSmartPhotos,
+                      activeColor: style.appColor,
+                      onChanged: (value) {
+                        setState(() {
+                          isSmartPhotos = value;
+                        });
+                      },
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                color: Colors.white,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    const Text('Make My Distance Invisible',
+                        style: TextStyle(fontSize: 16)),
+                    Switch(
+                      value: isSmartPhotos,
+                      activeColor: style.appColor,
+                      onChanged: (value) {
+                        setState(() {
+                          isSmartPhotos = value;
+                        });
+                      },
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
@@ -209,27 +196,27 @@ class _EditProfileState extends State<EditProfile> {
   }
 
   myBoxDecoration() {
-    return BoxDecoration(
+    return const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(5)));
   }
 
   Widget _buildGreyLabel(text) {
     return Padding(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       child: Text(
         '$text',
-        style: TextStyle(color: Colors.grey, fontSize: 16),
+        style: const TextStyle(color: Colors.grey, fontSize: 16),
       ),
     );
   }
 
   Widget _buildBoldFont(text) {
     return Padding(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       child: Text(
         '$text',
-        style: TextStyle(
+        style: const TextStyle(
             color: Colors.grey, fontSize: 16, fontWeight: FontWeight.bold),
       ),
     );

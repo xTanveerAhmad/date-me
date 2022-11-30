@@ -1,11 +1,4 @@
-/*
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Flutter UI Kit
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
-*/
+
 import 'package:flutter/material.dart';
 import '../components/styles.dart' as style;
 
@@ -59,23 +52,21 @@ class _ChatState extends State<Chat> {
           ),
         ),
         centerTitle: true,
-        title: Container(
-          child: Row(
-            children: const <Widget>[
-              CircleAvatar(
-                backgroundImage: AssetImage('assets/images/2.jpg'),
-                radius: 20,
+        title: Row(
+          children: const <Widget>[
+            CircleAvatar(
+              backgroundImage: AssetImage('assets/images/2.jpg'),
+              radius: 20,
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 10),
+              child: Text(
+                'John Doe',
+                style:
+                    TextStyle(color: Colors.black87, fontFamily: "semi-bold"),
               ),
-              Padding(
-                padding: EdgeInsets.only(left: 10),
-                child: Text(
-                  'John Doe',
-                  style:
-                      TextStyle(color: Colors.black87, fontFamily: "semi-bold"),
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
       body: _buildBody(),
